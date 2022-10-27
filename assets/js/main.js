@@ -33,3 +33,21 @@ a.forEach(item => {
     cursor.classList.remove('hover');
   });
 })
+
+
+function web(){
+    const elements = document.querySelectorAll('.web');
+    elements.forEach(x => x.classList.toggle('shown'));
+}
+
+function infographie(){
+    const elements = document.querySelectorAll('.infographie');
+    elements.forEach(x => x.classList.toggle('shown'));
+}
+
+function photo(){
+    const elements = document.querySelectorAll('.photo');
+    elements.forEach(x => x.classList.toggle('shown'));
+}
+
+web();
