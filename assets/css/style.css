@@ -3,4 +3,36 @@ body {
   background: #050c21;
   color: #eaf2f4;
   font-family: "Montserrat", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 1.5em;
+}
+
+.accButton {
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-left: 1em;
+}
+
+.menu {
+  margin-top: auto;
+  display: flex;
+  margin-bottom: auto;
+  justify-content: space-between;
+  width: 30%;
+}
+
+.logos_contacts > a > img {
+  width: 50%;
+  height: auto;
+}
+
+.logos_contacts {
+  width: 10%;
+  height: 100%;
+  display: flex;
 }/*# sourceMappingURL=style.css.map */
