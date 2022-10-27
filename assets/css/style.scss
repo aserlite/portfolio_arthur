@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,700;1,400&display=swap');
+
+// --------------------------colors------------------------
+$bleubg:#050c21;
+$bleu:#08334c;
+$blanc:#eaf2f4;
+// ---------------------------fonts------------------------
+$mont:'Montserrat', sans-serif;
+body {  
+    background:$bleubg;
+    color:$blanc;
+    font-family: $mont;
+}
