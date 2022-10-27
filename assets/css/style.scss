@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,700;1,400&display=swap');
 
 // --------------------------colors------------------------
+$bleubgB:rgba(5, 12, 33, .2);
 $bleubg:#050c21;
 $bleu:#08334c;
 $blanc:#eaf2f4;
@@ -17,7 +18,7 @@ header{
     justify-content: space-between;
     width: 100%;
     font-size: 1.5em;
-
+    font-weight: bold;
 }
 
 .accButton{
@@ -34,6 +35,7 @@ header{
     width: 30%;
 }
 
+
 .logos_contacts > a > img {
     width:50%;
     height: auto;
@@ -44,3 +46,80 @@ header{
     height: 100%;
     display: flex;
 }
+
+.cv a{
+    color:#eaf2f4;
+    text-decoration: none;
+    box-shadow:inset 0px 0px 0px 3px $blanc;
+    border-radius: 5rem;
+    padding:1em 3em; 
+    font-size:1.5em;
+    transition: .5s;
+}
+.cv a:hover{
+    box-shadow:inset 0px 0px 0px 10px $blanc;
+}
+
+.cv{
+    text-align: center;
+    margin-bottom:5em;
+}
+
+.contentacc{
+    display:flex;
+    width: 65%;
+    margin: auto;
+    margin-top: 20vh; 
+}
+
+.DescCV{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.desc{
+    width: 75%;
+    text-align: justify;
+    margin:auto;
+    font-size:1.25em;
+}
+
+.photoAC{
+    filter: drop-shadow(5px 5px 0 $blanc) drop-shadow(-1px -1px 0 $blanc);
+    transition: .5s;
+}
+
+.photoAC:hover{
+    filter: drop-shadow(15px 15px 0 $blanc) drop-shadow(-1px -1px 0 $blanc);
+}
+
+
+.active{
+    transition: .5s;
+}
+
+.menu>a{
+    position: relative;
+}
+
+.menu > a:before {
+    content: "";
+    padding-left:auto;
+    position: absolute;
+    width: 100%;
+    height: 2.5px;
+    top:1.3em;
+    background: $blanc;
+    visibility: hidden;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: .25s linear;
+  }
+
+  .menu > a:hover:before,
+  .menu > a:focus:before {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+
