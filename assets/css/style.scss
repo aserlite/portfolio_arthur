@@ -7,6 +7,7 @@ $bleu:#08334c;
 $blanc:#eaf2f4;
 // ---------------------------fonts------------------------
 $mont:'Montserrat', sans-serif;
+
 body {  
     background:$bleubg;
     color:$blanc;
@@ -14,6 +15,13 @@ body {
     cursor: none ;
 }
 
+::selection {
+    color: $bleubg;
+    background: $blanc;
+  }
+img::selection{
+    background: transparent;
+}
 a{
     cursor: none;
 }
@@ -23,6 +31,7 @@ header{
     justify-content: space-between;
     width: 100%;
     font-size: 1.5em;
+    margin-bottom: 12.5vh; 
     font-weight: bold;
 }
 
@@ -40,15 +49,16 @@ header{
     width: 30%;
 }
 
-
 .logos_contacts > a > img {
     width:50%;
     height: auto;
     transition:.5s;
 }
+
 .logos_contacts > a > img:hover{
     transform: translate(-5px,5px);
 }
+
 .logos_contacts{
     width: 10%;
     height: 100%;
@@ -77,7 +87,6 @@ header{
     display:flex;
     width: 65%;
     margin: auto;
-    margin-top: 10vh; 
 }
 
 .DescCV{
@@ -101,7 +110,6 @@ header{
 .photoAC:hover{
     filter: drop-shadow(15px 15px 0 $blanc) drop-shadow(-1px -1px 0 $blanc);
 }
-
 
 .active{
     transition: .5s;
@@ -173,6 +181,11 @@ hr{
     width: 150px;
     height: auto;
     margin: 6px;
+    transition:.5s;
+}
+
+.images img:hover{
+    transform: translate(-5px,5px);
 }
 
 .images {
@@ -191,28 +204,298 @@ hr{
     height: 50px;
     border-radius: 100%;
     border: 1px solid $blanc;
-    transition: all 200ms ease-out;
+    transition: all 150ms ease-out;
     position: fixed;
     pointer-events: none;
     left: 0;
     top: 0;
+    z-index: 1000;
     transform: translate(calc(-50% + 15px), -50%);
-  }
+}
   
-  .cursor2 {
+.cursor2 {
     width: 20px;
     height: 20px;
     border-radius: 100%;
     background-color: $blanc;
-    opacity: .3;
+    opacity: .5;
     position: fixed;
     transform: translate(-50%, -50%);
     pointer-events: none;
-    transition: width .3s, height .3s, opacity .3s;
-  }
+    transition: width .5s, height .5s, opacity .5s;
+    z-index: 1000;
+}
   
-  .cursorinnerhover {
+.cursorinnerhover {
     width: 50px;
     height: 50px;
     opacity: .5;
-  }
+}
+
+.content{
+    width:60%;
+    margin:auto;
+}
+
+.imagesRS img{
+    width: 150px;
+    height: auto;
+    margin: 6px;
+    transition:.5s;
+}
+
+.imagesRS{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10%;
+    flex-wrap:wrap;
+}
+
+.imagesRS img:hover{
+    transform: translate(-5px,5px);
+}
+
+.tits{
+    font-size:2.5em;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 150px;
+}
+  
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: $blanc;
+}
+  
+.contactsnum{
+    color:$blanc;
+    text-decoration: none;
+    position: relative;
+    font-size:2em;
+    text-align: center;
+    display:inline-block;
+}
+
+.contactsnum::before {  
+    transform: scaleX(0);
+    transform-origin: bottom right;
+}
+  
+.contactsnum:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+  
+.contactsnum::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    inset: 0 0 0 0;
+    background: $blanc;
+    z-index: -1;
+    transition: transform .5s ease;
+}
+
+.contactsnum:hover{
+    color:$bleubg;
+}
+
+.mesContacts{
+    text-align: center;
+}
+
+:root {
+    --surface-color: #eaf2f4;
+    --curve: 40;
+}
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 4rem 5vw;
+    padding: 0;
+    list-style-type: none;
+}
+  
+.card {
+    position: relative;
+    display: block;
+    height: 250px;
+    border-radius: calc(var(--curve) * 1px);
+    overflow: hidden;
+    text-decoration: none;
+}
+  
+.card__image {      
+    width: 100%;
+    height: auto;
+}
+  
+.card__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;      
+    border-radius: calc(var(--curve) * 1px);    
+    background-color: var(--surface-color);      
+    transform: translateY(100%);
+    transition: .2s ease-in-out;
+}
+  
+.card:hover .card__overlay {
+    transform: translateY(0);
+}
+  
+.card__header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    padding: 2em;
+    border-radius: calc(var(--curve) * 1px) calc(var(--curve) * 1px) 0 0;    
+    background-color: var(--surface-color);
+    transform: translateY(-100%);
+    transition: .2s ease-in-out;
+}
+  
+.card__arc {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: 100%;
+    right: 0;      
+    z-index: 1;
+}
+  
+.card__arc path {
+    fill: var(--surface-color);
+    d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+}       
+  
+.card:hover .card__header {
+    transform: translateY(0);
+}
+  
+.card__thumb {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;      
+    border-radius: 50%;      
+}
+  
+.card__title {
+    font-size: 1em;
+    margin: 0 0 .3em;
+    color: #6A515E;
+}
+  
+.card__tagline {
+    display: block;
+    margin: 1em 0;
+    font-size: .8em; 
+    color: #D7BDCA;  
+}
+  
+.card__status {
+    font-size: .8em;
+    color: #D7BDCA;
+}
+  
+.card__description {
+    padding: 0 2em 2em;
+    margin: 0;
+    color: #D7BDCA; 
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}    
+
+.selectBtn {
+    text-align: center;
+    display: block;
+    font-size: 1.5em;
+}
+
+input:hover {
+    cursor:none;
+}
+
+ul.ks-cboxtags {
+    list-style: none;
+    padding: 20px;
+}
+
+ul.ks-cboxtags li{
+  display: inline;
+}
+
+ul.ks-cboxtags li label{
+    display: inline-block;
+    background: transparent;
+    border: 2px solid $blanc;
+    color: $blanc;
+    border-radius: 25px;
+    white-space: nowrap;
+    margin: 3px 0px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: all .5;
+}
+
+ul.ks-cboxtags li label {
+    padding: 8px 12px;
+    cursor: none;
+}
+
+ul.ks-cboxtags li label::before {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 900;
+    font-size: 12px;
+    padding: 2px 6px 2px 2px;
+    font-size: 1em;
+    content: "+";
+    transition: transform .3s ease-in-out;
+}
+
+ul.ks-cboxtags li input[type="checkbox"]:checked + label::before {
+    content: "✓";
+    transition: transform .3s ease-in-out;
+}
+
+ul.ks-cboxtags li input[type="checkbox"]:checked + label {
+    border: 2px solid $blanc;
+    background-color: $blanc;
+    color: $bleubg;
+    transition: all .2s;
+}
+
+ul.ks-cboxtags li input[type="checkbox"] {
+  display: absolute;
+}
+
+ul.ks-cboxtags li input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+}
+

@@ -1,9 +1,28 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,700;1,400&display=swap");
 body {
   background: #050c21;
   color: #eaf2f4;
   font-family: "Montserrat", sans-serif;
   cursor: none;
+}
+
+::-moz-selection {
+  color: #050c21;
+  background: #eaf2f4;
+}
+
+::selection {
+  color: #050c21;
+  background: #eaf2f4;
+}
+
+img::-moz-selection {
+  background: transparent;
+}
+
+img::selection {
+  background: transparent;
 }
 
 a {
@@ -15,6 +34,7 @@ header {
   justify-content: space-between;
   width: 100%;
   font-size: 1.5em;
+  margin-bottom: 12.5vh;
   font-weight: bold;
 }
 
@@ -71,7 +91,6 @@ header {
   display: flex;
   width: 65%;
   margin: auto;
-  margin-top: 10vh;
 }
 
 .DescCV {
@@ -166,6 +185,11 @@ hr {
   width: 150px;
   height: auto;
   margin: 6px;
+  transition: 0.5s;
+}
+
+.images img:hover {
+  transform: translate(-5px, 5px);
 }
 
 .images {
@@ -184,11 +208,12 @@ hr {
   height: 50px;
   border-radius: 100%;
   border: 1px solid #eaf2f4;
-  transition: all 200ms ease-out;
+  transition: all 150ms ease-out;
   position: fixed;
   pointer-events: none;
   left: 0;
   top: 0;
+  z-index: 1000;
   transform: translate(calc(-50% + 15px), -50%);
 }
 
@@ -197,15 +222,286 @@ hr {
   height: 20px;
   border-radius: 100%;
   background-color: #eaf2f4;
-  opacity: 0.3;
+  opacity: 0.5;
   position: fixed;
   transform: translate(-50%, -50%);
   pointer-events: none;
-  transition: width 0.3s, height 0.3s, opacity 0.3s;
+  transition: width 0.5s, height 0.5s, opacity 0.5s;
+  z-index: 1000;
 }
 
 .cursorinnerhover {
   width: 50px;
   height: 50px;
   opacity: 0.5;
+}
+
+.content {
+  width: 60%;
+  margin: auto;
+}
+
+.imagesRS img {
+  width: 150px;
+  height: auto;
+  margin: 6px;
+  transition: 0.5s;
+}
+
+.imagesRS {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10%;
+  flex-wrap: wrap;
+}
+
+.imagesRS img:hover {
+  transform: translate(-5px, 5px);
+}
+
+.tits {
+  font-size: 2.5em;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 150px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #eaf2f4;
+}
+
+.contactsnum {
+  color: #eaf2f4;
+  text-decoration: none;
+  position: relative;
+  font-size: 2em;
+  text-align: center;
+  display: inline-block;
+}
+
+.contactsnum::before {
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+.contactsnum:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.contactsnum::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  inset: 0 0 0 0;
+  background: #eaf2f4;
+  z-index: -1;
+  transition: transform 0.5s ease;
+}
+
+.contactsnum:hover {
+  color: #050c21;
+}
+
+.mesContacts {
+  text-align: center;
+}
+
+:root {
+  --surface-color: #eaf2f4;
+  --curve: 40;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 4rem 5vw;
+  padding: 0;
+  list-style-type: none;
+}
+
+.card {
+  position: relative;
+  display: block;
+  height: 250px;
+  border-radius: calc(var(--curve) * 1px);
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.card__image {
+  width: 100%;
+  height: auto;
+}
+
+.card__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  border-radius: calc(var(--curve) * 1px);
+  background-color: var(--surface-color);
+  transform: translateY(100%);
+  transition: 0.2s ease-in-out;
+}
+
+.card:hover .card__overlay {
+  transform: translateY(0);
+}
+
+.card__header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  padding: 2em;
+  border-radius: calc(var(--curve) * 1px) calc(var(--curve) * 1px) 0 0;
+  background-color: var(--surface-color);
+  transform: translateY(-100%);
+  transition: 0.2s ease-in-out;
+}
+
+.card__arc {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  z-index: 1;
+}
+
+.card__arc path {
+  fill: var(--surface-color);
+  d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+}
+
+.card:hover .card__header {
+  transform: translateY(0);
+}
+
+.card__thumb {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.card__title {
+  font-size: 1em;
+  margin: 0 0 0.3em;
+  color: #6A515E;
+}
+
+.card__tagline {
+  display: block;
+  margin: 1em 0;
+  font-size: 0.8em;
+  color: #D7BDCA;
+}
+
+.card__status {
+  font-size: 0.8em;
+  color: #D7BDCA;
+}
+
+.card__description {
+  padding: 0 2em 2em;
+  margin: 0;
+  color: #D7BDCA;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.selectBtn {
+  text-align: center;
+  display: block;
+  font-size: 1.5em;
+}
+
+input:hover {
+  cursor: none;
+}
+
+ul.ks-cboxtags {
+  list-style: none;
+  padding: 20px;
+}
+
+ul.ks-cboxtags li {
+  display: inline;
+}
+
+ul.ks-cboxtags li label {
+  display: inline-block;
+  background: transparent;
+  border: 2px solid #eaf2f4;
+  color: #eaf2f4;
+  border-radius: 25px;
+  white-space: nowrap;
+  margin: 3px 0px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: all 0.5;
+}
+
+ul.ks-cboxtags li label {
+  padding: 8px 12px;
+  cursor: none;
+}
+
+ul.ks-cboxtags li label::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 900;
+  font-size: 12px;
+  padding: 2px 6px 2px 2px;
+  font-size: 1em;
+  content: "+";
+  transition: transform 0.3s ease-in-out;
+}
+
+ul.ks-cboxtags li input[type=checkbox]:checked + label::before {
+  content: "✓";
+  transition: transform 0.3s ease-in-out;
+}
+
+ul.ks-cboxtags li input[type=checkbox]:checked + label {
+  border: 2px solid #eaf2f4;
+  background-color: #eaf2f4;
+  color: #050c21;
+  transition: all 0.2s;
+}
+
+ul.ks-cboxtags li input[type=checkbox] {
+  display: absolute;
+}
+
+ul.ks-cboxtags li input[type=checkbox] {
+  position: absolute;
+  opacity: 0;
 }/*# sourceMappingURL=style.css.map */
