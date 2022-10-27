@@ -112,4 +112,9 @@ header {
 .menu > a:focus:before {
   visibility: visible;
   transform: scaleX(1);
+}
+
+hr {
+  width: 50%;
+  margin-top: 5em;
 }/*# sourceMappingURL=style.css.map */
