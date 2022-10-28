@@ -1,0 +1,358 @@
+
+/* GENERAL */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 62.5%;
+}
+
+/* LA FLECHE SUR LES LIENS A*/
+.arrow::after {
+  content: "\ebe6";
+  font-family: boxicons!important;
+  font-weight: 400;
+  font-size: 1.6rem;
+  vertical-align: middle;
+}
+
+
+/* QUELQUES REMARQUES :
+
+les couleurs :
+bleu (liens) : rgb(0,150,255);
+bleu (overlay) : rgba(0,78,255,0.4);
+gris foncé (product-brand) : color:darkgrey;
+
+le logo : font-family: 'Orbitron', sans-serif;
+l'effet d'ombrage sur les images tendances : box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+Un conseil -> ne vous attardez pas sur des détails. on dégrossit le travail et on fait ensuite
+une seconde passe plus précise (taille de fontes, marges et padding....).
+
+****************************
+BONUS (1,5pt): On s'attachera à rendre le site responsive. Cette page doit être consultable à partir d'un
+téléphone mobile (extra small device <600px).
+L'intégration du menu en responsive n'est pas demandée -->   .header nav {display: none;}
+****************************
+
+C'EST PARTI !!!!
+
+BON COURAGE ;-)
+
+*/
+
+.container{
+  max-width: 75%;
+  margin-left: auto;
+  margin-right:auto;
+}
+
+.arrow{
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  display: block;
+  margin-top: 15px;
+}
+
+/* LE HEADER (6pt)*/
+
+.logo{
+  font-family:'Orbitron', sans-serif;
+  font-size: 1.5rem !important;
+  font-style: italic;
+  margin: 0 15px !important;
+}
+
+.header{
+  background-image: url('../images/bg-header.jpg');
+  background-size: cover;
+  -webkit-backgorund-size: cover;
+}
+
+.header nav{
+  background-color: transparent;
+  color: white;
+  border-bottom: .5px solid darkgray;
+  position: relative;
+}
+
+.bx{
+  color: white;
+  font-size: 1.5rem;
+  margin: 0 .25rem;
+}
+
+.banner-intro > h2{
+  font-size: 5rem;
+  color: white;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+.banner-intro > span{
+  color:white;
+  text-transform: uppercase;
+  font-size:1.25rem; 
+  font-weight: 50;
+}
+.menu{
+  display: flex;
+  align-items: center;
+  padding: 25px;
+  justify-content: space-around;
+}
+
+.banner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45rem;
+}
+
+.banner > a > img{
+  height: 25rem;
+}
+
+.products-menu a{
+  color: white;
+  text-decoration: none;
+  font-size: .6rem;
+  margin: 0 5px;
+  text-transform: uppercase;
+}
+
+/* LES TENDANCES (4pt)*/
+.tendance-item{
+  display: flex;
+  padding: 25px;
+  position: relative;
+}
+
+.tendance-reverse{
+  flex-direction: row-reverse;
+}
+
+.tendance-item > a{
+  text-decoration: none;
+  color: white;
+  position: absolute;
+  background-color: rgb(0,150,255);
+  bottom: 0;
+  left: 50%;
+  margin-left: -25px;
+  width: 40px;
+  height: 40px;
+  font-size: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tendance-txt p{
+  font-size: 1rem;
+  padding: 10px 0;
+  line-height: 25px;
+}
+
+.tendance-txt .arrow{
+  color: rgb(0,150,255);
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.tendance-img{
+  flex-basis: 50%;
+}
+
+.tendance-img img{
+  width: 100%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.tendance-txt h3{
+  font-size: 1.60rem;
+  margin-bottom:1rem;
+  text-transform: capitalize;
+}
+
+.tendance-txt{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-basis: 50%;
+  padding: 25px;
+}
+
+
+/* LES PRODUITS (4pt)*/
+
+.product img{
+  max-height: 250px;
+	width: auto;
+}
+
+.product-price{
+  color: rgb(0,150,255);
+}
+
+.product-brand{
+  color: darkgray;
+  text-transform: uppercase;
+  margin-top: 1rem;
+}
+
+.product-title{
+  color: black;
+  text-transform: uppercase;
+  font-size: .8rem;
+  font-weight: 500;
+}
+
+.products > h2{
+  font-size: 2rem;
+  text-align: center;
+  padding: 40px 0;
+}
+
+.products-list{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.product{
+  flex-basis:25%;
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  text-decoration: none;
+  text-align: center;
+  margin: 25px 0;
+}
+.products > a{
+  color: white;
+  text-decoration: none;
+  background-color: rgb(0,150,255);
+  text-transform: uppercase;
+  padding: 20px;
+  font-size: 1rem;
+  max-width: 20%;
+  left: 40%;
+  text-align: center;
+  position: relative;
+  text-align:center;
+  display: block;
+  margin: 50px 0;
+}
+
+/* AVANTAGE CLUB (3pt)*/
+
+.adventure{
+  background-image: url('../images/bg-advantage.jpg');
+  background-size: cover;
+  position: relative;
+}
+
+.adventure-overlay{
+  position:absolute;
+  background-color: rgba(0,78,255,0.4); 
+  display: block;
+  height: 100%;
+  width: 100%;
+  top:0;
+}
+
+
+.adventure-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  align-items: center;
+  height: 25rem;
+  position: relative;
+  z-index:1;
+}
+
+.adventure-info h2{
+  font-size: 2rem;
+}
+
+.adventure-info p{
+  font-size:1.25rem;
+  max-width: 35%;
+  text-align:center;
+  margin-top:1.25rem;
+  line-height: 25px;
+  font-weight: 400;
+}
+
+/* LA NEWSLETTER (2pt)*/
+.newsletter{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px;
+  align-items: center;
+}
+
+.newsletter h2{
+  font-size:1.5rem;
+  padding-bottom:1.5rem;
+}
+
+.newsletter p{
+  font-size: 1rem;
+  text-align: center;
+  padding: 0px 0 25px 0;
+  max-width: 20%;
+}
+
+form{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+form input[type="submit"]{
+  background-color: rgb(0,150,255);
+  color: white;
+  border: none;
+  font-size: 1rem;
+  margin: 0 10px;
+  padding: 10px 25px 10px 25px;
+  flex-basis: 20%;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+form input[type="email"]{
+  flex-basis:50%;
+}
+
+/* LE FOOTER  (1pt)*/
+
+footer{
+  border-top: 1px solid darkgray;
+  border-bottom: 1px solid darkgray;
+  padding: 15px 0;
+}
+
+footer > span{
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+}
+
+footer > span > strong{
+  margin: 0 5px;
+}
+

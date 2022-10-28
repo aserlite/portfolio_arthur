@@ -50,15 +50,10 @@ function photo(){
     elements.forEach(x => x.classList.toggle('shown'));
 }
 
+function com(){
+  const elements = document.querySelectorAll('.com');
+  elements.forEach(x => x.classList.toggle('shown'));
+}
+
 web();  
 
-
-let personne={ 
-  'person':{ 
-    "genre" : "web",
-    "title" : "Autruche Verte"
-  },
-
-};
-
-console.log(personne['person'].genre);

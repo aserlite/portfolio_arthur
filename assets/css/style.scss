@@ -322,8 +322,8 @@ hr{
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin: 4rem 5vw;
+    gap: 5rem;
+    margin: 4rem 15vw;
     padding: 0;
     list-style-type: none;
 }
@@ -331,7 +331,7 @@ hr{
 .card{
     position: relative;
     display: none;
-    height: 250px;
+    height: 200px;
     border-radius: calc(var(--curve) * 1px);
     overflow: hidden;
     text-decoration: none;
@@ -367,8 +367,8 @@ display: block !important;
     display: flex;
     align-items: center;
     gap: 2em;
-    padding: 2em;
-    border-radius: calc(var(--curve) * 1px) calc(var(--curve) * 1px) 0 0;    
+    padding: 1em;
+    border-radius: calc(var(--curve) * .5px) calc(var(--curve) * .5px) 0 0;    
     background-color: var(--surface-color);
     transform: translateY(-100%);
     transition: .2s ease-in-out;
