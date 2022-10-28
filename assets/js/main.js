@@ -53,7 +53,12 @@ function photo(){
 web();  
 
 
+let personne={ 
+  'person':{ 
+    "genre" : "web",
+    "title" : "Autruche Verte"
+  },
 
-fetch('assets/projects.json')
-    .then((response) => response.json())
-    .then((json) => console.log(json));
+};
+
+console.log(personne['person'].genre);
