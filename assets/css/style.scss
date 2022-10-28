@@ -495,7 +495,12 @@ ul.ks-cboxtags li input[type="checkbox"] {
 .warning{
     display: none;
 }
-
+.svg{
+    position:absolute;
+    width:375px;
+    left:0;
+    top:-1.5em;
+}
 @media screen and (min-width:1150px) and (max-width: 1400px) {
     .menu{
         width:40%;
@@ -529,6 +534,15 @@ ul.ks-cboxtags li input[type="checkbox"] {
     .accButton{
         display: none;
     }
+    body{
+        cursor: auto ;
+    }
+    .cursor{
+        display: none;
+    }
+    .cursor2{
+        display: none;
+    }
   }
 
   @media screen and (min-width:599px) and (max-width:949px){
@@ -546,6 +560,10 @@ ul.ks-cboxtags li input[type="checkbox"] {
     .imagesRS img{
         width: 50px;
     }
+    .svg{
+        width:200px;
+        top:0;
+    }
   }
 
   @media screen and (min-width:440px) and (max-width:599px){
@@ -562,6 +580,7 @@ ul.ks-cboxtags li input[type="checkbox"] {
     .imagesRS img{
         width: 50px;
     }
+
   }
 
   @media screen and (max-width:439px){
@@ -611,6 +630,7 @@ ul.ks-cboxtags li input[type="checkbox"] {
     .contactsnum{
         font-size: 1.5em;
     }
+
   }
 
   @media screen and (min-width:575px) and (max-width: 949px) {
@@ -621,6 +641,7 @@ ul.ks-cboxtags li input[type="checkbox"] {
     .imagesRS img{
         width: 150px;
     }
+
   }
 
   @media screen and (min-width:350px) and (max-width:574px){
@@ -645,5 +666,14 @@ ul.ks-cboxtags li input[type="checkbox"] {
     }
     .warning{
         display: block;
+    }
+  }
+
+  @media screen and (max-width:800px){
+    .svg{
+        display: none;
+    }
+    .mesContacts{
+        margin-bottom:2em;
     }
   }
