@@ -50,4 +50,10 @@ function photo(){
     elements.forEach(x => x.classList.toggle('shown'));
 }
 
-web();
+web();  
+
+
+
+fetch('assets/projects.json')
+    .then((response) => response.json())
+    .then((json) => console.log(json));
