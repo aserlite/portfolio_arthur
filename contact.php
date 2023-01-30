@@ -15,9 +15,9 @@
         <img src="assets\trait.svg" class="svg"/>
         <div class="accButton">Arthur CUVILLON</div>    
         <div class="menu">
-            <a class="Macc" href="index.html">Accueil</a>
-            <a class="Mprojets" href="projects.html">Mes projets</a>
-            <a class="Mcontact" id="active" href="contact.html">Contacts</a>
+            <a class="Macc" href="index.php">Accueil</a>
+            <a class="Mprojets" href="projects.php">Mes projets</a>
+            <a class="Mcontact" id="active" href="contact.php">Contacts</a>
         </div>
         <div class="logos_contacts">
             <a href="https://github.com/aserlite" target="_blank"><img src="assets\img\github.png" alt="Github"></a>

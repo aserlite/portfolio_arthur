@@ -135,6 +135,14 @@ let projets={
         "alt" : "mockup gobelet Floating Summer",
         "description" : "Mockups réalisés pour le festival fictif Floating Summer sur Photoshop"
       },
+      18:{ 
+        "genre" : "web",
+        "title" : "Site La Nuit MMI",
+        "lien" : "https://lanuitmmi.fr/",
+        "img" : "lnm.jpg",
+        "alt" : "Screen site La Nuit MMI",
+        "description" : "Site réalisé sur Laravel d'un évènement réel (près de 200 personnes) avec un depot de projets, billeterie, ..."
+      },
 };
 
 

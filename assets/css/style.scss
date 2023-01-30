@@ -697,3 +697,62 @@ ul.ks-cboxtags li input[type="checkbox"] {
     margin-left:auto;
     margin-right: auto;
 }
+
+.music_list{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    place-items: center;
+    width:100%;
+}
+
+.music_list figure{
+ margin: 0;
+ max-width: 90%;
+}
+
+.music_list audio{
+    max-width: 100%;
+}
+
+.music{
+    margin-bottom:1.5rem;
+}
+
+.music_header{
+    text-align: center;
+}
+
+.music_header a{
+    color:#eaf2f4;
+    text-decoration: none;
+    font-size:1em;
+    position : fixed;
+    transition: .5s;
+    top:1rem;
+    left:1rem;
+}
+
+.music_header a:before{
+    content: "← ";
+}
+
+.musique_link{
+    flex-direction: column;
+    font-size: 1.5rem;
+    margin:1rem 0 0;
+    border-top:solid 2px;
+}
+
+.musique_link a{
+    color:#eaf2f4;
+    text-decoration: none;
+    box-shadow:inset 0px 0px 0px 3px $blanc;
+    border-radius: 5rem;
+    padding:1em 3em; 
+    font-size:1rem;
+    transition: .5s;
+}
+
+.musique_link a:hover{
+    box-shadow:inset 0px 0px 0px 10px $blanc;
+}

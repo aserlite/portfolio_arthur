@@ -8,16 +8,16 @@
     <link rel="icon" type="image/png" href="assets\img\ac.png">
     <link rel="stylesheet" href="assets\css\style.css">
 </head>
-<body>
+<body >
     <div class="cursor"></div>
     <div class="cursor2"></div>
     <header>
       <img src="assets\trait.svg" class="svg"/>
         <div class="accButton">Arthur CUVILLON</div>    
         <div class="menu">
-            <a class="Macc" href="index.html">Accueil</a>
-            <a class="Mprojets" id="active" href="projects.html">Mes projets</a>
-            <a class="Mcontact" href="contact.html">Contacts</a>
+            <a class="Macc" href="index.php">Accueil</a>
+            <a class="Mprojets" id="active" href="projects.php">Mes projets</a>
+            <a class="Mcontact" href="contact.php">Contacts</a>
         </div>
         <div class="logos_contacts">
             <a href="https://github.com/aserlite" target="_blank"><img src="assets\img\github.png" alt="Github"></a>
