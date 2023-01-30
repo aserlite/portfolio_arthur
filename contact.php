@@ -30,7 +30,7 @@
     <div class="cursor"></div>
     <div class="cursor2"></div>
     <header>
-        <img src="assets\trait.svg" class="svg"/>
+        <img src="assets\trait.svg" class="svg" alt='decoration'/>
         <div class="accButton">Arthur CUVILLON</div>    
         <div class="menu">
             <a class="Macc" href="index.php">Accueil</a>
