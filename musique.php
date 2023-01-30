@@ -25,8 +25,8 @@ foreach ($music_list as $music): ?>
 <div class="music">
     <img src="<?php echo $music['album']['cover_medium']; ?>" />
     <div class="text">
-        <p class='title'><?php echo $music['title']; ?></p>
-        <p class='name_author'><?php echo $music['artist']['name']; ?></p>
+        <p class='title'><?php echo mb_strimwidth($music['title'], 0, 25, "..."); ?></p>
+        <p class='name_author'><?php echo mb_strimwidth($music['artist']['name'], 0, 25, "..."); ?></p>
     </div>
     <figure>
     <audio controls src="<?php echo $music['preview']; ?>">
