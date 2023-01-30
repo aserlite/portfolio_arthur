@@ -668,4 +668,24 @@ ul.ks-cboxtags li input[type=checkbox] {
   .mesContacts {
     margin-bottom: 2em;
   }
+}
+.btnP a {
+  color: #eaf2f4;
+  text-decoration: none;
+  box-shadow: inset 0px 0px 0px 3px #eaf2f4;
+  border-radius: 5rem;
+  padding: 1em 3em;
+  font-size: 1.5em;
+  transition: 0.5s;
+}
+
+.btnP a:hover {
+  box-shadow: inset 0px 0px 0px 10px #eaf2f4;
+}
+
+.btnP {
+  text-align: center;
+  margin-bottom: 5em;
+  margin-left: auto;
+  margin-right: auto;
 }/*# sourceMappingURL=style.css.map */

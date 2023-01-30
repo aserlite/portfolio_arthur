@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="icon" type="image/png" href="ac.png" />
+    <title>Momomotus</title>
+  </head>
+  <body>
+    <div class="menu" id="menu">
+      <input type="button" onclick='exec(pokemons,ncat="pokemons")' value="Pokemons" ></input>
+      <input type="button" onclick='exec(francais,ncat="Dictionaire Francais")' value="Francais"></input>
+      <input type="button" onclick='exec(cars,ncat="Car Brands")' value="Car brands"></input>
+    </div>
+    <div class="container">
+      <p id="titre"></p>
+      <input type='text' class="telcla" id='txtInput'></input>
+      <table class="grille" id="grille"></table>
+      <div class="resultats" id="resultats"></div> 
+    </div>
+    <script src="cars.js"></script>
+    <script src="pokemons.js"></script>
+    <script src="liste_francais.js"></script>
+
+    <script src="main.js"></script>
+  </body>
+</html>

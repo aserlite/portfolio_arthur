@@ -1,0 +1,114 @@
+/* 
+gris : #3C3C3B
+creme : #eaf2f4
+jaune : #F5D547
+bleu : #1446A0
+
+vert bon : #347044
+jaune bon : #a1a116
+*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+* {
+  background-color: #050c21;
+  color: #eaf2f4;
+  font-family: 'Montserrat', sans-serif;
+  overflow: hidden;
+  font-weight: 600;
+}
+body {
+  max-width: 100vw;
+  max-height: 100vh;
+  transition: 0.5s;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+.container p{
+  top:0;
+  position: absolute;
+  margin-top:2.5rem;
+  font-size: 2.5rem;
+  text-transform: capitalize;
+}
+.grille {
+  transition: 0.5s;
+  font-size: 3.5rem;
+}
+
+.grille td {
+  width: 3rem;
+  text-align: center;
+  margin: 0;
+  text-transform: uppercase;
+}
+.inletter {
+  background-color: #a1a116;
+}
+.goodletter {
+  background-color: #347044;
+}
+
+.pula {
+  display: none !important;
+}
+
+.resultats {
+  font-size: 3vw;
+  text-align: center;
+  line-height: 15vh;
+  transition: 0.5s;
+  max-width: 95%;
+}
+
+.telcla {
+  border: none;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  cursor: default;
+  opacity: 0;
+}
+
+.menu{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content:space-evenly!important;
+    margin-top:1rem;
+    flex-direction: column;
+}
+
+input[type='button']{
+  border-radius: 10px;
+  border-bottom-left-radius: 0;
+  font-size: 2.5rem;
+  transition: .5s;
+  border:#eaf2f4 solid 1px;
+  padding:1rem; 
+}
+
+input[type='button']:hover{
+  cursor: pointer;
+  transform: translate(.5rem,-.5rem);
+  border-left:#eaf2f4 .75rem solid;
+  border-bottom:#eaf2f4 .75rem solid;
+}
+
+@media screen and (max-width: 550px) {
+  .resultats {
+    font-size: 10vw;
+  }
+  .grille {
+    transition: 0.5s;
+    font-size: 2rem;
+  }
+  .grille td {
+    width: 2rem;
+  }
+}
