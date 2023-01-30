@@ -4,9 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arthur CUVILLON</title>
-    <link rel="stylesheet" href="assets\css\style.css">
     <link rel="icon" type="image/png" href="assets\img\ac.png">
+    <link rel="stylesheet" href="assets\css\style.css">
+
+    <!-- Primary Meta Tags -->
+    <title>Portfolio Arthur CUVILLON</title>
+    <meta name="title" content="Portfolio Arthur CUVILLON">
+    <meta name="description" content="Portfolio d'Arthur CUVILLON">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthurcuvillon.com/">
+    <meta property="og:title" content="Portfolio Arthur CUVILLON">
+    <meta property="og:description" content="Portfolio d'Arthur CUVILLON">
+    <meta property="og:image" content="https://arthurcuvillon.com/assets/img/MazdaVimy.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://arthurcuvillon.com/">
+    <meta property="twitter:title" content="Portfolio Arthur CUVILLON">
+    <meta property="twitter:description" content="Portfolio d'Arthur CUVILLON">
+    <meta property="twitter:image" content="https://arthurcuvillon.com/assets/img/MazdaVimy.jpg">
 </head>
 <body>
     <div class="cursor"></div>
