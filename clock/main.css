@@ -1,0 +1,153 @@
+@import url('https://fonts.cdnfonts.com/css/ds-digital');
+.clock {
+    border-radius: 50%;
+    border: 5px solid #eaf2f4;
+    box-shadow: inset 2px 3px 8px 0 rgba(0, 0, 0, 0.1);
+    width: 350px;
+    height: 350px;
+}
+
+.wrap {
+    position: relative;
+    width: 350px;
+    height: 350px;
+}
+.min, .hour {
+    position: absolute;
+    height: 100px; width: 6px;
+    margin: auto;
+    top: -27%; left: 0;	bottom: 0; right: 0;
+    transform-origin: bottom center;
+    transform: rotate(0deg);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+    background: #eaf2f4;
+}
+.min {
+    position: absolute;
+    height: 140px;
+    width: 4px;
+    top: -40%;
+    left: 0;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+    transform: rotate(0deg);
+}
+
+.sec {
+    position: absolute;
+    height: 90px;
+    width: 2px;
+    margin: auto;
+    top: -26%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 4px;
+    background: #ff4b3e;
+    transform-origin: bottom center;
+    transform: rotate(180deg);
+}
+
+.p{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 80%;
+    background: #eaf2f4;
+    z-index: 99;
+    margin: auto;
+}
+.search{
+    width: 50%;
+    margin: auto;
+    margin-top:2.5rem;
+}
+
+.search p{
+    margin: 0;
+}
+.choix{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+}
+
+
+#searchbar{
+    list-style-type: none;
+    max-height: 20vh;
+    overflow: scroll;
+    display: none;
+    padding: 0;
+}
+
+#searchbar a{
+    text-decoration: none;
+    color:#eaf2f4;
+}
+
+.visible{
+    display: block !important;
+}
+
+.heures{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top:5rem;
+}
+
+#digits{
+    font-size:5rem ;
+    margin: 2.5rem auto;
+    font-family: 'DS-Digital', sans-serif;
+}
+
+::-webkit-scrollbar{
+    height: 0 !important;
+}
+
+#searchinput{
+    border: solid .5px rgba(234, 242, 244, 1);
+    border-radius: 10px;
+    background: none;
+    padding:.2rem 1rem ;
+    color:#eaf2f4;
+}
+
+#fuseau_actuel{
+    text-align: center;
+    margin: 1rem 0 ;
+}
+
+.trait{
+    width: 5px;
+    height: 10px;
+    position: absolute;
+    background: #eaf2f4;
+}
+
+.t0h{
+      left: 49.4%;
+  }
+
+.t3h{
+    top:49%;
+    right: 0;
+    transform:rotate(90deg);
+}
+
+.t6h{
+bottom: 0;
+    left:49.5%;
+}
+
+.t9h{
+    transform:rotate(90deg);
+    top:48.5%;
+    left:0;
+}

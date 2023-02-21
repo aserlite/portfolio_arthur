@@ -35,6 +35,44 @@
         <a href="index.php">Retourner a l'accueil</a>
     </div>
     <div class="music_list">
+
+<?php
+$app_id     = "580304";
+$app_secret = "bdbfd62704653c5041cb70fdd25ead55";
+$my_url     = "http://arthurcuvillon.com/musique.php";
+ 
+session_start();
+$code = $_REQUEST["code"];
+ 
+if(empty($code)){
+	$_SESSION['state'] = md5(uniqid(rand(), TRUE)); //CSRF protection
+ 
+	$dialog_url = "https://connect.deezer.com/oauth/auth.php?app_id=".$app_id
+		."&redirect_uri=".urlencode($my_url)."&perms=email,offline_access"
+		."&state=". $_SESSION['state'];
+ 
+	header("Location: ".$dialog_url);
+	exit;
+	}
+ var_dump($code);
+if($_REQUEST['state'] == $_SESSION['state']) {
+	$token_url = "https://connect.deezer.com/oauth/access_token.php?app_id="
+	.$app_id."&secret="
+	.$app_secret."&code=".$code;
+ 
+	$response  = file_get_contents($token_url);
+	$params    = null;
+	parse_str($response, $params);
+	$api_url   = "https://api.deezer.com/user/me?access_token="
+			.$params['access_token'];
+ 
+	$user = json_decode(file_get_contents($api_url));
+	echo("Hello " . $user->name);
+}else{
+	echo("The state does not match. You may be a victim of CSRF.");
+}
+?>
+
 <?php
 $music_list = file_get_contents('https://api.deezer.com/user/3928705522/charts');
 $music_list = json_decode($music_list, true);

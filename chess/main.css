@@ -1,0 +1,56 @@
+.green {
+    background: var(--green);
+}
+
+.white {
+    background: var(--white);
+}
+
+.board td {
+    width: var(--taille-case);
+    height: var(--taille-case);
+}
+
+.board img {
+    max-width: 75%;
+    aspect-ratio: 1/1;
+    max-height: 75%;
+    object-fit: contain;
+}
+
+.board td {
+    text-align: center;
+    vertical-align: middle;
+    border : .01px solid var(--white);
+}
+
+.board {
+    border: #050c21 solid;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--white);
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+header {
+    z-index: 99;
+    position: relative;
+    height: 5vh;
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center
+;
+}
+
+.possible {
+    background: #a1a116;
+}

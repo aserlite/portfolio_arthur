@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="icon" type="image/png" href="ac.png" />
+    <title>Chess</title>
+    <style>
+        :root{
+            --taille-case:75px;
+            --green:#699a40;
+            --white:#f3f3f4;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <input type="range" name="tailleCases" id="tailleCases" min="10" max="150">
+    <labe for="tailleCases"> Taille du plateau</labe>
+</header>
+<div class="content">
+    <div class="board" id="board">
+    </div>
+</div>
+<script src="game.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
+
+
