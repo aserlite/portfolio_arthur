@@ -30,3 +30,11 @@
     align-items: center;
     margin-top: 1rem;
 }
+
+#restart_game {
+    background: rgba(0, 0, 0, 0);
+    border : solid 1px white;
+    border-radius: 10px;
+    padding: .5rem 1rem;
+    color : gainsboro;
+}

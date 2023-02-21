@@ -107,4 +107,18 @@ function sleep(m) {
     } while (currentDate - date < m);
 }
 
+// function bot(){
+//     let selected = Math.floor(Math.random() * 9);
+//     while (selected === 0) {
+//         selected = Math.floor(Math.random() * 9);
+//     }
+//     let actcase = document.getElementById("case"+selected);
+//     while(actcase.attributes.onclick){
+//         selected = Math.floor(Math.random() * 9);
+//         actcase = document.getElementById("case"+selected);
+//         console.log('refresh case');
+//     }
+//     play(selected)
+//     return true
+// }
 gen_board()

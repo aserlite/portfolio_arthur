@@ -17,7 +17,7 @@ parachoix.addEventListener("click", function () {
 })
 
 function get_time() {
-    let url = 'http://worldtimeapi.org/api/timezone/';
+    let url = 'https://worldtimeapi.org/api/timezone/';
     let get_url = window.location.href;
     let tmp;
     if (get_url.includes("?")) {
@@ -94,7 +94,7 @@ function checkN(n) {
     return n;
 }
 
-searchbar.addEventListener("change", function () {
+searchbar.addEventListener("keypress", function () {
     let input, filter, ul, li, a, i, txtValue;
     filter = searchbar.value.toUpperCase();
     ul = document.getElementById("searchbar");

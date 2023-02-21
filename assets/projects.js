@@ -143,6 +143,23 @@ let projets={
         "alt" : "Screen site La Nuit MMI",
         "description" : "Site réalisé sur Laravel d'un évènement réel (près de 200 personnes) avec un depot de projets, billeterie, ..."
       },
+      19:{ 
+        "genre" : "com",
+        "title" : "Video sur les inteligences artificielles",
+        "lien" : "https://www.youtube.com/watch?v=jGtdv3o2gak",
+        "img" : "ia.png",
+        "alt" : "Screen de la video",
+        "description" : "Video réalisé en cours de communication expliquant dans les grandes lignes les ia et leurs enjeux."
+      },
+      20:{ 
+        "genre" : "com",
+        "title" : "Article",
+        "lien" : "assets\projects\WordPress_CUVILLON_Arthur.pdf",
+        "img" : "article1.jpg",
+        "alt" : "Screen de l'article",
+        "description" : "Article realisé en cours de communication"
+      },
+      
 };
 
 
